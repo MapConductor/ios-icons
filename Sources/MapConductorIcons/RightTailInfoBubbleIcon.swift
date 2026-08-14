@@ -33,7 +33,6 @@ public final class RightTailInfoBubbleIcon: MarkerIconProtocol {
     private let snippet: String
     private let fillColor: UIColor
     private let labelTextColor: UIColor
-    private let bitmapIcon: BitmapIcon
 
     public init(
         image: UIImage,
@@ -55,21 +54,24 @@ public final class RightTailInfoBubbleIcon: MarkerIconProtocol {
         self.debug = debug
         self.anchor = RightTailInfoBubbleIcon.defaultAnchor
         self.infoAnchor = RightTailInfoBubbleIcon.defaultInfoAnchor
-        self.bitmapIcon = RightTailInfoBubbleIcon.makeIcon(
-            image: image,
-            label: label,
-            snippet: snippet,
-            fillColor: fillColor,
-            labelTextColor: labelTextColor,
-            scale: scale,
-            iconSize: iconSize,
-            anchor: RightTailInfoBubbleIcon.defaultAnchor,
-            infoAnchor: RightTailInfoBubbleIcon.defaultInfoAnchor,
-            debug: debug
-        )
     }
 
-    public func toBitmapIcon() -> BitmapIcon { bitmapIcon }
+    public func toBitmapIcon() -> BitmapIcon {
+        BitmapIconCache.shared.value(forKey: "right_tail_info_bubble_icon_\(hashCode())") {
+            RightTailInfoBubbleIcon.makeIcon(
+                image: image,
+                label: label,
+                snippet: snippet,
+                fillColor: fillColor,
+                labelTextColor: labelTextColor,
+                scale: scale,
+                iconSize: iconSize,
+                anchor: anchor,
+                infoAnchor: infoAnchor,
+                debug: debug
+            )
+        }
+    }
 
     public func hashCode() -> Int {
         var result = image.hashValue
