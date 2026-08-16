@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 135.2 87.68" role="img">
+  <title>RightTailInfoBubbleIcon with a photo, title, and snippet</title>
+  <rect x="0.5" y="0.5" width="134.2" height="86.68" rx="12" fill="#e2e8f0" stroke="#94a3b8"/>
+  <!-- RightTailInfoBubbleIcon defaults: iconSize 32 (MarkerIconSize.Small),
+       fill .white, label .black, snippet UIColor(white: 128/255).
+       drawableInnerPadding = 3.2, contentMargin = 6.4, labelFont = systemFont(22.4),
+       snippetFont = systemFont(12.8). "12 min" measures 63.205 x 27, "850 m away" 72.163 x 15.
+       canvasWidth = 32 + 3.2 + 63.205 + 12.8 = 111.205,
+       canvasHeight = max(32, 27) + 3.2 + 15 + 6.4 = 56.6,
+       pointerWidth = canvasWidth / 9 = 12.356, pointerHeight = canvasHeight / 8 = 7.075.
+       The image is a plain square of (3.2 + 32) - 6.4 = 28.8 at (6.4, 6.4) - no rounding, no border. -->
+  <g transform="translate(12 12)">
+    <rect x="0" y="0" width="111.205" height="56.6" fill="#fff"/>
+    <polygon points="86.492,56.6 98.849,56.6 92.670,63.675" fill="#fff"/>
+    <clipPath id="right-photo"><rect x="6.4" y="6.4" width="28.8" height="28.8"/></clipPath>
+    <g clip-path="url(#right-photo)">
+      <rect x="6.4" y="6.4" width="28.8" height="28.8" fill="#9bd3f5"/>
+      <circle cx="28.5" cy="13.5" r="3.6" fill="#ffd166"/>
+      <path d="M6.4 35.2 17 24l7.2 7.2 4.3-3.6 7.7 7.6Z" fill="#4f9d69"/>
+    </g>
+    <text x="41.6" y="30.556" fill="#000" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="22.4">12 min</text>
+    <text x="6.4" y="50.2" fill="#808080" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="12.8">850 m away</text>
+  </g>
+</svg>

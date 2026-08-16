@@ -13,10 +13,10 @@ import UIKit
 public final class RightTailInfoBubbleIcon: MarkerIconProtocol {
     /// Mirrors `MarkerIconSize.Small`.
     public static let defaultIconSize: CGFloat = MarkerIconSize.Small
-    /// Mirrors React's `#d3d3d3` default (light gray bubble).
-    public static let defaultFillColor = UIColor(white: 211.0 / 255.0, alpha: 1.0)
-    /// Mirrors React's `#ffff00` default (yellow label).
-    public static let defaultLabelTextColor: UIColor = .yellow
+    /// Mirrors React's `#ffffff` default (white bubble).
+    public static let defaultFillColor: UIColor = .white
+    /// Mirrors React's `#000000` default (black label).
+    public static let defaultLabelTextColor: UIColor = .black
     /// Mirrors the `#808080` snippet color.
     public static let defaultSnippetColor = UIColor(white: 128.0 / 255.0, alpha: 1.0)
     public static let defaultAnchor = CGPoint(x: 0.5, y: 1.0)
