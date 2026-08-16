@@ -25,7 +25,6 @@ public final class CircleIcon: MarkerIconProtocol {
     private let fillColor: UIColor
     private let strokeColor: UIColor
     private let strokeWidth: CGFloat
-    private let bitmapIcon: BitmapIcon
 
     public init(
         fillColor: UIColor = defaultFillColor,
@@ -43,19 +42,22 @@ public final class CircleIcon: MarkerIconProtocol {
         self.debug = debug
         self.anchor = CircleIcon.defaultAnchor
         self.infoAnchor = CircleIcon.defaultInfoAnchor
-        self.bitmapIcon = CircleIcon.makeIcon(
-            fillColor: fillColor,
-            strokeColor: strokeColor,
-            strokeWidth: strokeWidth,
-            scale: scale,
-            iconSize: iconSize,
-            anchor: CircleIcon.defaultAnchor,
-            infoAnchor: CircleIcon.defaultInfoAnchor,
-            debug: debug
-        )
     }
 
-    public func toBitmapIcon() -> BitmapIcon { bitmapIcon }
+    public func toBitmapIcon() -> BitmapIcon {
+        BitmapIconCache.shared.value(forKey: "circle_icon_\(hashCode())") {
+            CircleIcon.makeIcon(
+                fillColor: fillColor,
+                strokeColor: strokeColor,
+                strokeWidth: strokeWidth,
+                scale: scale,
+                iconSize: iconSize,
+                anchor: anchor,
+                infoAnchor: infoAnchor,
+                debug: debug
+            )
+        }
+    }
 
     public func hashCode() -> Int {
         var result = fillColor.hashValue

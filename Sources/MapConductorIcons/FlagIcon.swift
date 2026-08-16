@@ -31,7 +31,6 @@ public final class FlagIcon: MarkerIconProtocol {
     private let fillColor: UIColor
     private let strokeColor: UIColor
     private let strokeWidth: CGFloat
-    private let bitmapIcon: BitmapIcon
 
     public init(
         fillColor: UIColor = defaultFillColor,
@@ -49,19 +48,22 @@ public final class FlagIcon: MarkerIconProtocol {
         self.debug = debug
         self.anchor = FlagIcon.defaultAnchor
         self.infoAnchor = FlagIcon.defaultInfoAnchor
-        self.bitmapIcon = FlagIcon.makeIcon(
-            fillColor: fillColor,
-            strokeColor: strokeColor,
-            strokeWidth: strokeWidth,
-            scale: scale,
-            iconSize: iconSize,
-            anchor: FlagIcon.defaultAnchor,
-            infoAnchor: FlagIcon.defaultInfoAnchor,
-            debug: debug
-        )
     }
 
-    public func toBitmapIcon() -> BitmapIcon { bitmapIcon }
+    public func toBitmapIcon() -> BitmapIcon {
+        BitmapIconCache.shared.value(forKey: "flag_icon_\(hashCode())") {
+            FlagIcon.makeIcon(
+                fillColor: fillColor,
+                strokeColor: strokeColor,
+                strokeWidth: strokeWidth,
+                scale: scale,
+                iconSize: iconSize,
+                anchor: anchor,
+                infoAnchor: infoAnchor,
+                debug: debug
+            )
+        }
+    }
 
     public func hashCode() -> Int {
         var result = fillColor.hashValue

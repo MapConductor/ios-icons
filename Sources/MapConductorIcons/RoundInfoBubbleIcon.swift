@@ -26,7 +26,6 @@ public final class RoundInfoBubbleIcon: MarkerIconProtocol {
     private let image: UIImage
     private let label: String
     private let fillColor: UIColor
-    private let bitmapIcon: BitmapIcon
 
     public init(
         image: UIImage,
@@ -44,19 +43,22 @@ public final class RoundInfoBubbleIcon: MarkerIconProtocol {
         self.debug = debug
         self.anchor = RoundInfoBubbleIcon.defaultAnchor
         self.infoAnchor = RoundInfoBubbleIcon.defaultInfoAnchor
-        self.bitmapIcon = RoundInfoBubbleIcon.makeIcon(
-            image: image,
-            label: label,
-            fillColor: fillColor,
-            scale: scale,
-            iconSize: iconSize,
-            anchor: RoundInfoBubbleIcon.defaultAnchor,
-            infoAnchor: RoundInfoBubbleIcon.defaultInfoAnchor,
-            debug: debug
-        )
     }
 
-    public func toBitmapIcon() -> BitmapIcon { bitmapIcon }
+    public func toBitmapIcon() -> BitmapIcon {
+        BitmapIconCache.shared.value(forKey: "round_info_bubble_icon_\(hashCode())") {
+            RoundInfoBubbleIcon.makeIcon(
+                image: image,
+                label: label,
+                fillColor: fillColor,
+                scale: scale,
+                iconSize: iconSize,
+                anchor: anchor,
+                infoAnchor: infoAnchor,
+                debug: debug
+            )
+        }
+    }
 
     public func hashCode() -> Int {
         var result = image.hashValue

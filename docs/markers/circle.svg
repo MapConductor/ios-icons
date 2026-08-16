@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 72 72" role="img">
+  <title>CircleIcon</title>
+  <rect x="0.5" y="0.5" width="71" height="71" rx="12" fill="#e2e8f0" stroke="#94a3b8"/>
+  <!-- CircleIcon defaults: iconSize 48, strokeWidth 1, fill .red, stroke .white.
+       radius = canvasSize / 2 - strokeWidth = 23, centered in the 48pt canvas. -->
+  <circle cx="36" cy="36" r="23" fill="#ff0000" stroke="#fff" stroke-width="1"/>
+</svg>

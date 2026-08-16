@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 72 72" role="img">
+  <title>FlagIcon</title>
+  <rect x="0.5" y="0.5" width="71" height="71" rx="12" fill="#e2e8f0" stroke="#94a3b8"/>
+  <!-- FlagIcon defaults: iconSize 48, strokeWidth 1, fill .red, stroke .white.
+       iconScale = 48 / (51.48 - 5.161) = 1.036292, offsetX = (48 - 40.77 * iconScale) / 2 = 2.875185,
+       then the 5.161 artwork margin is dropped. The 48pt canvas sits at (12, 12) in this 72pt card.
+       Paint order matches drawFlag(): pennant, pole, pole cap. -->
+  <g transform="translate(12 12) translate(2.875185 0) scale(1.036292) translate(-5.161 -5.161)"
+     fill="#ff0000" stroke="#fff" stroke-width="1" stroke-linejoin="round">
+    <path d="M14.16 7.037 L41.892 7.037 L42.815 9.797 C43.339 10.554 43.34 11.517 42.815 12.297 L41.5 12.199 C39.579 16.477 39.558 22.846 41.453 26.646 L42.845 29.2 C43.295 29.865 43.386 30.384 43.28 30.584 L41.891 30.999 L14.16 30.999 Z"/>
+    <rect x="7.161" y="5.5" width="4.999" height="40.48"/>
+    <circle cx="9.66" cy="5.5" r="2"/>
+  </g>
+</svg>

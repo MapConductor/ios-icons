@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 72 72" role="img">
+  <title>PinGlyphIcon with a hospital glyph</title>
+  <rect x="0.5" y="0.5" width="71" height="71" rx="12" fill="#e2e8f0" stroke="#94a3b8"/>
+  <!-- PinGlyphIcon defaults: iconSize 48, strokeWidth 1, fill .red, glyph/stroke .white.
+       The 48pt canvas sits at (12, 12) in this 72pt card. -->
+  <g transform="translate(12 12)">
+    <path d="M24.4688 0.9375 C16.1844 0.9375 9.4688 7.6532 9.4688 15.9375 C9.4688 18.6019 10.1843 21.0938 11.4023 23.2613 C11.6046 23.6212 11.8166 23.9756 12.0469 24.3169 L24.4688 45.9375 L36.8906 24.3169 C37.0819 24.0338 37.2469 23.7338 37.4175 23.4375 L37.5356 23.2613 C38.7525 21.0938 39.4687 18.6019 39.4687 15.9375 C39.4687 7.6532 32.7525 0.9375 24.4687 0.9375 Z" fill="#ff0000"/>
+    <path d="M24.4688 0.9375 C16.1844 0.9375 9.4688 7.6532 9.4688 15.9375 C9.4688 18.6019 10.1843 21.0938 11.4023 23.2613 C11.6046 23.6212 11.8166 23.9756 12.0469 24.3169 L24.4688 45.9375 L36.8906 24.3169 C37.0819 24.0338 37.2469 23.7338 37.4175 23.4375 L37.5356 23.2613 C38.7525 21.0938 39.4687 18.6019 39.4687 15.9375 C39.4687 7.6532 32.7525 0.9375 24.4687 0.9375 Z" fill="none" stroke="#fff" stroke-width="1" stroke-linejoin="round" stroke-linecap="round"/>
+    <path d="M9 3 L15 3 L15 9 L21 9 L21 15 L15 15 L15 21 L9 21 L9 15 L3 15 L3 9 L9 9 Z" fill="#fff" transform="translate(13.92 6.72) scale(0.84)"/>
+  </g>
+</svg>

@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 118.28 67.2" role="img">
+  <title>RoundInfoBubbleIcon with a photo and price</title>
+  <rect x="0.5" y="0.5" width="117.28" height="66.2" rx="12" fill="#e2e8f0" stroke="#94a3b8"/>
+  <!-- RoundInfoBubbleIcon defaults: iconSize 32 (MarkerIconSize.Small), fill .white, label .black.
+       innerPadding = 3.2, labelFont = systemFont(16), "¥1,200" measures 49.484 x 19.
+       canvasWidth = 32 + 3.2 + 49.484 + 3.2 * 3 = 94.284, canvasHeight = max(32, 19) + 6.4 = 38.4,
+       cornerRadius = canvasHeight / 2 = 19.2, pointerHeight = pointerHalfWidth = canvasHeight / 8 = 4.8.
+       The image is a plain square - no circular clip, no border.
+
+       DELIBERATE DEVIATION FROM THE SDK, do not "correct" this back:
+       the SDK draws the image 32x32 at (3.2, 3.2), whose left corners fall outside the pill's
+       rounded end (at x = 3.2 the pill only spans y 8.59..29.81, so the corners overhang by up to
+       5.4pt). This preview instead draws it 24x24 centered on the end cap at (7.2, 7.2), which
+       keeps a 2.23pt corner margin inside the outline. The label keeps its real position. -->
+  <g transform="translate(12 12)">
+    <rect x="0" y="0" width="94.284" height="38.4" rx="19.2" fill="#fff"/>
+    <polygon points="42.342,38.4 51.942,38.4 47.142,43.2" fill="#fff"/>
+    <clipPath id="round-photo"><rect x="7.2" y="7.2" width="24" height="24"/></clipPath>
+    <g clip-path="url(#round-photo)">
+      <rect x="7.2" y="7.2" width="24" height="24" fill="#9bd3f5"/>
+      <circle cx="25.2" cy="13.2" r="3" fill="#ffd166"/>
+      <path d="M7.2 31.2 16 21.4l5.2 5.2 4.5-3.7 5.5 8.3Z" fill="#4f9d69"/>
+    </g>
+    <text x="38.4" y="25.169" fill="#000" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="16">¥1,200</text>
+  </g>
+</svg>
