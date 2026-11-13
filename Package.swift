@@ -9,7 +9,7 @@ let frameworkLibraryType: Product.Library.LibraryType? =
 let usingLocalCore = FileManager.default.fileExists(atPath: "../ios-sdk-core/Package.swift")
 let coreDependency: Package.Dependency = usingLocalCore
     ? .package(path: "../ios-sdk-core")
-    : .package(url: "https://github.com/MapConductor/ios-sdk-core", from: "1.0.0")
+    : .package(url: "https://github.com/MapConductor/ios-sdk-core", from: "1.4.0")
 
 let package = Package(
     name: "mapconductor-icons",
@@ -31,13 +31,6 @@ let package = Package(
         .target(
             name: "MapConductorIcons",
             dependencies: [
-                .product(name: "MapConductorCore", package: "ios-sdk-core"),
-            ],
-        ),
-        .testTarget(
-            name: "MapConductorIconsTests",
-            dependencies: [
-                "MapConductorIcons",
                 .product(name: "MapConductorCore", package: "ios-sdk-core"),
             ],
         ),
